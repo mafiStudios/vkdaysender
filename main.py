@@ -27,7 +27,7 @@ def check_events(event):  # Проверка событий
         elif "admire" in text or "восхи" in text:
             sendchat(answers("admire"), chat_id, vk_session)
         else:
-            sendchat("Че ты за хуйню высрал. Напиши Help, не позорься.", chat_id, vk_session)
+            sendchat("Не понял", chat_id, vk_session)
     if event.type == VkBotEventType.MESSAGE_NEW and event.from_user:  # Если сообщение в лс
         log(f"{event.message['text']} от {event.message['from_id']}", dt.today())
         try:
