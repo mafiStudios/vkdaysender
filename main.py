@@ -52,7 +52,7 @@ def main():
             log("Ошибка vk_api", dt.today())
 
         time = str(datetime.now().time())
-        if time[:5] == "04:15" and str(dt.today()) != olddate:
+        if time[:5] == "00:00" and str(dt.today()) != olddate:
             log("Новый день!", str(dt.today()))
             new_day(True, chats_id, vk_session)
             olddate = str(dt.today())
