@@ -14,7 +14,7 @@ VkCheck = True  # Будет ли бот отвечать на сообщени�
 def check_events(event):  # Проверка событий
     if event.type == VkBotEventType.MESSAGE_NEW and event.chat_id:  # Если сообщение в чат
         log(f"{event.message['text']} из чата {event.chat_id}", dt.today())
-        text = event.message["text"]
+        text = event.message["text"].lower()
         chat_id = event.chat_id
         if "когда" in text:
             new_day(False, event.chat_id, vk_session)
